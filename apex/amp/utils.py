@@ -108,7 +108,7 @@ def cached_cast(cast_fn, x, cache):
         # and reused from the cache, it will not actually have x as its parent.
         # Therefore, we choose to invalidate the cache (and force refreshing the cast)
         # if x.requires_grad and cached_x.requires_grad do not match.
-        #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
+        #
         # During eval (i.e. running under with torch.no_grad()) the invalidation
         # check would cause the cached value to be dropped every time, because
         # cached_x would always be created with requires_grad=False, while x would
